@@ -1,0 +1,183 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@700&family=Bree+Serif&family=Fraunces:ital,opsz,wght@1,9..144,500&family=Lato:wght@100;300&family=Montserrat:wght@200;500;700&family=Roboto:wght@100;300&family=Ubuntu:wght@300&display=swap');
+
+
+:root{
+  /* Colors */
+--cream: hsl(30, 38%, 92%);
+--dark-cyan: hsl(158, 36%, 37%);
+--darker-cyan:hsl(158, 36%, 25%);
+--very-dark-blue: hsl(212, 21%, 14%);
+--dark-grayish-blue: hsl(228, 12%, 48%);
+--white: hsl(0, 0%, 100%);
+
+/* fonts */
+--header-fonts: "Fraunces", sans-serif;
+--paragraph-fonts: "Montserrat", sans-serif;
+
+
+}
+html{
+    font-size:100%;
+}
+
+body{
+    width:100%;
+    height:100vh;
+    margin: 0;
+    padding: 0;
+    background-color: var(--cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    font-family: var(--header-fonts);
+}
+
+p,a{
+    font-family: var(--paragraph-fonts);
+    font-size: 14px;
+}
+
+/* Main Container */
+.container{
+    max-width: 570px;
+    height:460px;
+    margin:0 15px;
+}
+/* content Wrapper */
+.container .content{
+    width:100%;
+    height:100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.container .content .image{
+    width:50%;
+    height:100%;
+    display: block;
+    float:left;
+    overflow: hidden;
+}
+
+.container .content .image img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.container .content .image .mobile-img{
+    display: none;
+}
+
+.container .content .text-content{
+     width:50%;
+     height:100%;
+     float:left;
+     background-color: var(--white);
+     padding:30px;
+
+}
+
+.container .text-content .preview{
+  text-transform: uppercase;
+  color:var(--dark-grayish-blue);
+  letter-spacing: 4px;
+  padding-bottom: 15px;
+}
+
+.container .text-content .header{
+  color:var(--very-dark-blue);
+  font-size:32px;
+}
+
+.container .text-content .detail{
+    padding:25px 0;
+    color:var(--dark-grayish-blue);
+    line-height: 1.7;
+}
+
+.container .text-content .prices{
+    color:var(--dark-cyan);
+    font-size:32px;
+    position:relative;
+    width:100%;
+    display: inline-block;
+}
+
+.container .text-content span{
+    color:var(--dark-grayish-blue);
+    font-size: 14px;
+    text-decoration: line-through;
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-80%, -50%);
+}
+
+.container .text-content .btn{
+    padding:10px 0;
+    width:100%;
+    display: inline-block;
+    background-color: var(--dark-cyan);
+    text-align: center;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 7px;
+    margin-top: 25px;
+    font-size: 15px;
+}
+
+.container .text-content .btn:hover{
+    background-color:var(--darker-cyan);
+}
+
+.container .text-content .btn img{
+    padding-right:5px;
+
+}
+
+/* responsive Design */
+/* For Screen with 375px width */
+@media screen and (max-width:375px) {
+    .container{
+        height:auto;
+    }
+    .container .content .image{
+        width:100%;
+        height:250px;
+
+    }
+
+    .container .content .image .desktom-img{
+        display: none;
+    }
+
+    .container .content .image .mobile-img{
+        display: block;
+    }
+
+    .container .content .text-content{
+        width:100%;
+        height:auto;
+        padding:20px;
+    }
+
+    .container .text-content .header{
+        line-height: 0.9;
+    }
+}
+
